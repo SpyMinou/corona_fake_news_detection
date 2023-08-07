@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            COVID-19 Fake News Detection
+        </title>
+        <link rel="stylesheet" href="globals.css"/>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="mainPaper">
+        <header>
+            <h2>
+                University Of Science And Technology Houari Boumediene
+            </h2>
+            <h1>
+                COVID-19 Fake News Detection
+            </h1>
+            <h3>
+                You Can Submit A News Article Or A Post You've Found On Social Media And Find Out If It's Real Or Misinformation
+            </h3>
+        </header>
+        <main>
+            <div>
+                <h4>
+                    Why COVID-19 misinformation Matters
+                </h4>
+                <p>
+                    Misinformation about COVID-19 can have serious consequences, Inaccurate information about the virus, its transmission, prevention, and treatment can lead to confusion, fear, and misguided actions. It is important to combat COVID-19 fake news to ensure accurate information reaches the public. Our mission is to help you distinguish between real and fake information.
+                </p>
+                <h4>
+                    What is COVID-19?
+                </h4>
+                <p>
+                    COVID-19, also known as the coronavirus disease 2019, is a viral illness caused by the SARS-CoV-2 virus. It emerged in late 2019, spreading globally and causing a pandemic. Symptoms include fever, cough, and difficulty breathing. It spreads through respiratory droplets and close contact. To combat COVID-19, follow guidelines, practice good hand hygiene, wear masks, and maintain physical distancing.
+                </p>
+            </div>
+            <div>
+                <form onsubmit="submitForm(event)">
+                    <textarea id="myTextarea"></textarea>
+                    <div class="lang">
+                        <label>EN</label>
+                        <input onchange="handleCheckBox(event)" type="checkbox" id="en"/>
+                        <label>AR</label>
+                        <input onchange="handleCheckBox(event)" type="checkbox" id="ar" checked="true"/>
+                    </div>
+                    <input type="submit" value="check">
+                </form>
+                <div class="waiting"></div>
+                <div class="container" hidden="true">    
+                    <div class="progress">
+                      <div class="progress-bar">
+                          <p class="resultPer"></p>
+                      </div>                       
+                    </div> 
+                    <p class="result"></p>
+                </div>
+                <div>
+                    The results depends highly on the dataset we used to make the model!
+                </div>
+            </div>
+            <div>
+                <h4>
+                    how did we make this possible
+                </h4>
+                <p>
+                    Our project aimed to fight against fake news specifically related to COVID-19 by developing a detection system. using advanced technologies such as artificial intelligence and machine learning, we trained a model that can analyze various sources of information and identify COVID-19 misinformation accurately. With this project, our primary objective was to contribute to the global efforts in combating COVID-19 misinformation by providing a tool that helps individuals to distinguish between real and fake news online.
+            </div>
+        </main>
+        <footer>
+        Made by: Benghalia Abderraouf And Hadj Mebarek Aymen. Supervised by :Zellal Nassim 
+        </footer>
+    </div>
+    <div id="backPapers"></div>
+    <div id="backPapers"></div>
+    <div id="backPapers"></div>
+    </body>
+</html> 

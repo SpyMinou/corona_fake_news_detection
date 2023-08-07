@@ -1,0 +1,12 @@
+To run the program you need the following python packages :
+        flask
+        flask_cors
+        nltk
+        demoji
+        re
+        qalsadi
+        tensorflow
+        emoji
+        pickle
+
+start by running the python server "server.py" then just open the web file "fakenews.html" and test your news

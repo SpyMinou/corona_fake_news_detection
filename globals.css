@@ -1,0 +1,214 @@
+:root {
+    --end-width: 100%;
+}
+@font-face {
+  font-family: 'rebotoBold';
+  src: url('./fonts/RobotoCondensed-Bold.ttf');
+}
+@font-face {
+  font-family: 'rebotoRegular';
+  src: url('./fonts/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+  font-family: 'chomsky';
+  src: url('./fonts/Chomsky.otf');
+}
+
+h1,h2,h3,h4{
+    font-family: 'rebotoBold';
+    font-size: 1.7vw;
+    text-align: center;
+}
+h1{
+    font-size: 2vw;
+    font-weight: 900;
+}
+h3{
+    font-size: 1.5vw;
+}
+h2{
+    font-family: chomsky;
+    font-size: 2vw;
+}
+h4{
+    line-height: 1.5rem;
+}
+#backPapers{
+    background-image: url('https://t4.ftcdn.net/jpg/02/96/90/71/360_F_296907113_JNiQC2wY3YrVVtH2Ajs9EhHFvZpB9FDJ.jpg');
+    border: 2px black solid;
+    height: 94vh;
+    width: 97vw;
+    background-color: white;
+    position: absolute;
+}
+#backPapers:last-child{
+    background-color: black;
+    background-image: none;
+    right:0.5vh;
+    top:4vh;
+    z-index: -4;
+}
+#backPapers:nth-child(2){
+    z-index: -2;
+    top:3vh;
+    right:1.5vh;
+}
+#backPapers:nth-child(3){
+    top:2vh;
+    right:3vh;
+    z-index: -1;
+}
+body{
+    font-family: 'rebotoRegular';
+    font-size: 1vw;
+    overflow: hidden;
+}
+#mainPaper{
+    margin-right: 2vw;
+    position: relative;
+    /* background-color: white; */
+    background-image: url('https://t4.ftcdn.net/jpg/02/96/90/71/360_F_296907113_JNiQC2wY3YrVVtH2Ajs9EhHFvZpB9FDJ.jpg');
+    height: 94vh;
+    border: 2px black solid;
+}
+main{
+    display: flex;
+    height: 72%;
+    border-top: 2px black solid;
+}
+header{
+    height: 20%;
+}
+footer{
+    padding-top: 0.5vw;
+    border-top: 2px black solid;
+    height: 5%;
+    text-align: center;
+}
+main > div:nth-child(2n+1){
+    width:25%;
+    padding: 1rem;
+}
+main > div:nth-child(2n){
+    border-left: 2px black solid;
+    border-right: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:50%;
+}
+main > div:nth-child(2n)>div:last-child{
+    height: 5%;
+    text-align: center;
+    padding: 0;
+    padding-top: 1vh;
+    border-top: 2px black solid;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5vw;
+    margin: 1rem;
+    height: 60%;
+}
+textarea{
+    background-color: #e4e4e4;
+    /* background-image: url('https://t4.ftcdn.net/jpg/02/96/90/71/360_F_296907113_JNiQC2wY3YrVVtH2Ajs9EhHFvZpB9FDJ.jpg'); */
+    resize: none;
+    border-radius: 0;
+    outline: none;
+    width: 100%;
+    height: 80%;
+    font-size: 1vw;
+}
+.container,.waiting {
+  width: 100%;
+  height: 25%;
+  text-align: center;
+}
+.progress{
+    margin: 0 auto;
+    width: 50%;
+    border: 2px black solid;
+    padding: 1px;
+}
+.progress-bar {	
+  height: 1.5vw;
+  background-color: black;  
+  transition: 0.4s linear;  
+  transition-property: width, background-color;    	 
+  width: 100%; 
+  animation: progressAnimationStrike 2s forwards;
+  position: relative;
+}
+@keyframes progressAnimationStrike {
+     from { width: 0 }
+     to   { width: var(--end-width); }
+}
+.resultPer{
+    position: absolute;
+    right: -1vw;
+    top: 1vw;
+    font-size: 1vw;
+}
+.result,.waiting{
+    font-size: 2vw;
+}
+.waiting p{
+    width: 8vw;
+    text-align: left;
+    margin: 0 auto;
+}
+input{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    cursor: pointer;
+    height: 10%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    font-size: 1.5vw;
+}
+input[type='checkbox'],label{
+    width: 1vw;
+    height: 1vw;
+    display: inline-block;
+}
+input[type="checkbox"] {
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  background-color: transparent;
+  color: black;
+  border: 0.15em black solid;                        
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.6vw;
+  height: 0.6vw;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  background-color: black;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+.lang{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5vw;
+}
+label{
+    margin-bottom: 0.2vw;
+}
